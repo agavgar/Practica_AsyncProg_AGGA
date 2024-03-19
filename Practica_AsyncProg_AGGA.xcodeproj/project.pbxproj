@@ -30,6 +30,7 @@
 		6EEBD3392BA8472C0047D79A /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEBD3382BA8472C0047D79A /* Models.swift */; };
 		6EEBD33C2BA851520047D79A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEBD33A2BA851520047D79A /* LoginViewController.swift */; };
 		6EEBD33D2BA851520047D79A /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6EEBD33B2BA851520047D79A /* LoginViewController.xib */; };
+		6EEBD3412BA9FB9E0047D79A /* CombineCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 6EEBD3402BA9FB9E0047D79A /* CombineCocoa */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EEBD3412BA9FB9E0047D79A /* CombineCocoa in Frameworks */,
 				6E8035612BA0FE6600449875 /* KeychainSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -322,6 +324,7 @@
 			name = Practica_AsyncProg_AGGA;
 			packageProductDependencies = (
 				6E8035602BA0FE6600449875 /* KeychainSwift */,
+				6EEBD3402BA9FB9E0047D79A /* CombineCocoa */,
 			);
 			productName = Practica_AsyncProg_AGGA;
 			productReference = 6E8035012BA0DE2D00449875 /* Practica_AsyncProg_AGGA.app */;
@@ -397,7 +400,7 @@
 			mainGroup = 6E8034F82BA0DE2D00449875;
 			packageReferences = (
 				6E80355F2BA0FE6600449875 /* XCRemoteSwiftPackageReference "keychain-swift" */,
-				6EEBD33E2BA9F8960047D79A /* XCRemoteSwiftPackageReference "CombineCocoa" */,
+				6EEBD33F2BA9FB9E0047D79A /* XCRemoteSwiftPackageReference "CombineCocoa" */,
 			);
 			productRefGroup = 6E8035022BA0DE2D00449875 /* Products */;
 			projectDirPath = "";
@@ -802,12 +805,12 @@
 				version = 21.0.0;
 			};
 		};
-		6EEBD33E2BA9F8960047D79A /* XCRemoteSwiftPackageReference "CombineCocoa" */ = {
+		6EEBD33F2BA9FB9E0047D79A /* XCRemoteSwiftPackageReference "CombineCocoa" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/CombineCommunity/CombineCocoa.git";
 			requirement = {
 				kind = exactVersion;
-				version = 1.0.0;
+				version = 0.4.1;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -817,6 +820,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 6E80355F2BA0FE6600449875 /* XCRemoteSwiftPackageReference "keychain-swift" */;
 			productName = KeychainSwift;
+		};
+		6EEBD3402BA9FB9E0047D79A /* CombineCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6EEBD33F2BA9FB9E0047D79A /* XCRemoteSwiftPackageReference "CombineCocoa" */;
+			productName = CombineCocoa;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

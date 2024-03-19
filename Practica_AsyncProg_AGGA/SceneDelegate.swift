@@ -6,17 +6,46 @@
 //
 
 import UIKit
+import Combine
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
-
+    var appState: AppState = AppState(loginUseCase: LoginUseCase())
+    var cancelable: AnyCancellable?
+    
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         self.window = UIWindow(windowScene: windowScene)
-        self.window!.rootViewController = LoginViewController()
-        self.window?.makeKeyAndVisible()
+        
+        // Evaluate states in app
+        appState.validateControlLogin()
+            
+        // Naviugation Controller
+        var nav: UINavigationController?
+        
+        // State box
+        self.cancelable = appState.$statusLogin
+            .sink(receiveValue: { state in
+                switch state{
+                case .none, .notValidated:
+                    // Go Login
+                    print("Go Login")
+                    DispatchQueue.main.async {
+                        nav = UINavigationController(rootViewController: LoginViewController(appState: self.appState))
+                        self.window!.rootViewController = nav
+                        self.window?.makeKeyAndVisible()
+                    }
+                case .succes:
+                    // Go HOME
+                    print("Go Home")
+                case .error:
+                    print("Error")
+                }
+            })
+        
+        
+        
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

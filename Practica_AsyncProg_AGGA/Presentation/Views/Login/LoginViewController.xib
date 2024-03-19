@@ -29,7 +29,7 @@
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="title" translatesAutoresizingMaskIntoConstraints="NO" id="GQe-8X-Axi">
                     <rect key="frame" x="16" y="109" width="361" height="136"/>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uQK-cu-OYd">
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uQK-cu-OYd">
                     <rect key="frame" x="136" y="465.66666666666669" width="121" height="35.666666666666686"/>
                     <color key="tintColor" systemColor="systemYellowColor"/>
                     <state key="normal" title="Button"/>

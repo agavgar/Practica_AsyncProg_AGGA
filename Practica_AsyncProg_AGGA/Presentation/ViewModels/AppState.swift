@@ -28,7 +28,7 @@ final class AppState {
         self.loginUseCase = loginUseCase
     }
     
-    // Functyion Login
+    // Function Login
     func loginApp(user: String, password: String) {
         
         Task{
