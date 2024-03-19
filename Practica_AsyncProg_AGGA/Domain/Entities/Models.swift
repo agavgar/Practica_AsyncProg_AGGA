@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+struct Heroes: Decodable {
+    let id: UUID?
+    let name: String?
+    let description: String?
+    let favorite: Bool?
+    let photo: String?
+}

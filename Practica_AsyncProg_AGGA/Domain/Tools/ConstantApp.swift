@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+struct ConstantApp {
+    static let CONST_API_URL = "https://dragonball.keepcoding.education/api"
+    static let CONST_TOKEN_ID_KC = "tokenJWTKeyChaincom.AGGA.práctica"
+}

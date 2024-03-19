@@ -9,13 +9,27 @@
 /* Begin PBXBuildFile section */
 		6E8035052BA0DE2D00449875 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8035042BA0DE2D00449875 /* AppDelegate.swift */; };
 		6E8035072BA0DE2D00449875 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8035062BA0DE2D00449875 /* SceneDelegate.swift */; };
-		6E8035092BA0DE2D00449875 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8035082BA0DE2D00449875 /* ViewController.swift */; };
-		6E80350C2BA0DE2D00449875 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E80350A2BA0DE2D00449875 /* Main.storyboard */; };
 		6E80350E2BA0DE2E00449875 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E80350D2BA0DE2E00449875 /* Assets.xcassets */; };
 		6E8035112BA0DE2E00449875 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E80350F2BA0DE2E00449875 /* LaunchScreen.storyboard */; };
 		6E80351C2BA0DE2E00449875 /* Practica_AsyncProg_AGGATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E80351B2BA0DE2E00449875 /* Practica_AsyncProg_AGGATests.swift */; };
 		6E8035262BA0DE2E00449875 /* Practica_AsyncProg_AGGAUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8035252BA0DE2E00449875 /* Practica_AsyncProg_AGGAUITests.swift */; };
 		6E8035282BA0DE2E00449875 /* Practica_AsyncProg_AGGAUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8035272BA0DE2E00449875 /* Practica_AsyncProg_AGGAUITestsLaunchTests.swift */; };
+		6E8035442BA0E3A100449875 /* LocalDataKC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8035432BA0E3A100449875 /* LocalDataKC.swift */; };
+		6E80354B2BA0E78000449875 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E80354A2BA0E78000449875 /* LoginView.swift */; };
+		6E80354D2BA0F66E00449875 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E80354C2BA0F66E00449875 /* AppState.swift */; };
+		6E80354F2BA0F71900449875 /* LoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E80354E2BA0F71900449875 /* LoginUseCase.swift */; };
+		6E8035512BA0F80200449875 /* LoginRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8035502BA0F80200449875 /* LoginRepositoryProtocol.swift */; };
+		6E8035532BA0F8FE00449875 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8035522BA0F8FE00449875 /* Endpoints.swift */; };
+		6E8035562BA0F92D00449875 /* HTTPResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8035552BA0F92D00449875 /* HTTPResponse.swift */; };
+		6E8035582BA0F97F00449875 /* HTTPMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8035572BA0F97F00449875 /* HTTPMethods.swift */; };
+		6E80355A2BA0F9DB00449875 /* ConstantApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8035592BA0F9DB00449875 /* ConstantApp.swift */; };
+		6E80355C2BA0FA9800449875 /* NetworkLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E80355B2BA0FA9800449875 /* NetworkLogin.swift */; };
+		6E80355E2BA0FCD100449875 /* LoginRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E80355D2BA0FCD100449875 /* LoginRepository.swift */; };
+		6E8035612BA0FE6600449875 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 6E8035602BA0FE6600449875 /* KeychainSwift */; };
+		6EEBD3372BA8469D0047D79A /* NetworkHeroes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEBD3362BA8469D0047D79A /* NetworkHeroes.swift */; };
+		6EEBD3392BA8472C0047D79A /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEBD3382BA8472C0047D79A /* Models.swift */; };
+		6EEBD33C2BA851520047D79A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEBD33A2BA851520047D79A /* LoginViewController.swift */; };
+		6EEBD33D2BA851520047D79A /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6EEBD33B2BA851520047D79A /* LoginViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +53,6 @@
 		6E8035012BA0DE2D00449875 /* Practica_AsyncProg_AGGA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Practica_AsyncProg_AGGA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E8035042BA0DE2D00449875 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6E8035062BA0DE2D00449875 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		6E8035082BA0DE2D00449875 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		6E80350B2BA0DE2D00449875 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6E80350D2BA0DE2E00449875 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6E8035102BA0DE2E00449875 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6E8035122BA0DE2E00449875 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +61,21 @@
 		6E8035212BA0DE2E00449875 /* Practica_AsyncProg_AGGAUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Practica_AsyncProg_AGGAUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E8035252BA0DE2E00449875 /* Practica_AsyncProg_AGGAUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Practica_AsyncProg_AGGAUITests.swift; sourceTree = "<group>"; };
 		6E8035272BA0DE2E00449875 /* Practica_AsyncProg_AGGAUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Practica_AsyncProg_AGGAUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		6E8035432BA0E3A100449875 /* LocalDataKC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataKC.swift; sourceTree = "<group>"; };
+		6E80354A2BA0E78000449875 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		6E80354C2BA0F66E00449875 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		6E80354E2BA0F71900449875 /* LoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCase.swift; sourceTree = "<group>"; };
+		6E8035502BA0F80200449875 /* LoginRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRepositoryProtocol.swift; sourceTree = "<group>"; };
+		6E8035522BA0F8FE00449875 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
+		6E8035552BA0F92D00449875 /* HTTPResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPResponse.swift; sourceTree = "<group>"; };
+		6E8035572BA0F97F00449875 /* HTTPMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethods.swift; sourceTree = "<group>"; };
+		6E8035592BA0F9DB00449875 /* ConstantApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantApp.swift; sourceTree = "<group>"; };
+		6E80355B2BA0FA9800449875 /* NetworkLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLogin.swift; sourceTree = "<group>"; };
+		6E80355D2BA0FCD100449875 /* LoginRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRepository.swift; sourceTree = "<group>"; };
+		6EEBD3362BA8469D0047D79A /* NetworkHeroes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHeroes.swift; sourceTree = "<group>"; };
+		6EEBD3382BA8472C0047D79A /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		6EEBD33A2BA851520047D79A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		6EEBD33B2BA851520047D79A /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E8035612BA0FE6600449875 /* KeychainSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,11 +129,12 @@
 			children = (
 				6E8035042BA0DE2D00449875 /* AppDelegate.swift */,
 				6E8035062BA0DE2D00449875 /* SceneDelegate.swift */,
-				6E8035082BA0DE2D00449875 /* ViewController.swift */,
-				6E80350A2BA0DE2D00449875 /* Main.storyboard */,
-				6E80350D2BA0DE2E00449875 /* Assets.xcassets */,
 				6E80350F2BA0DE2E00449875 /* LaunchScreen.storyboard */,
+				6E80350D2BA0DE2E00449875 /* Assets.xcassets */,
 				6E8035122BA0DE2E00449875 /* Info.plist */,
+				6E8035342BA0E2BE00449875 /* Presentation */,
+				6E80353A2BA0E33000449875 /* Domain */,
+				6E8035402BA0E37E00449875 /* Data */,
 			);
 			path = Practica_AsyncProg_AGGA;
 			sourceTree = "<group>";
@@ -127,6 +156,154 @@
 			path = Practica_AsyncProg_AGGAUITests;
 			sourceTree = "<group>";
 		};
+		6E8035342BA0E2BE00449875 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				6E8035352BA0E2C900449875 /* Views */,
+				6E8035362BA0E2D500449875 /* ViewModels */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		6E8035352BA0E2C900449875 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6E8035392BA0E32300449875 /* Error */,
+				6E8035382BA0E31D00449875 /* Home */,
+				6E8035372BA0E31500449875 /* Login */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6E8035362BA0E2D500449875 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				6E80354C2BA0F66E00449875 /* AppState.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		6E8035372BA0E31500449875 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				6E80354A2BA0E78000449875 /* LoginView.swift */,
+				6EEBD33A2BA851520047D79A /* LoginViewController.swift */,
+				6EEBD33B2BA851520047D79A /* LoginViewController.xib */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		6E8035382BA0E31D00449875 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		6E8035392BA0E32300449875 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		6E80353A2BA0E33000449875 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				6E80353C2BA0E35A00449875 /* UseCase */,
+				6E80353B2BA0E35300449875 /* Protocols */,
+				6E80353F2BA0E37700449875 /* Tools */,
+				6E80353D2BA0E36200449875 /* Entities */,
+				6E80353E2BA0E36800449875 /* Extensions */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		6E80353B2BA0E35300449875 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				6E8035502BA0F80200449875 /* LoginRepositoryProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		6E80353C2BA0E35A00449875 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				6E80354E2BA0F71900449875 /* LoginUseCase.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		6E80353D2BA0E36200449875 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				6EEBD3382BA8472C0047D79A /* Models.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		6E80353E2BA0E36800449875 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		6E80353F2BA0E37700449875 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				6E8035592BA0F9DB00449875 /* ConstantApp.swift */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		6E8035402BA0E37E00449875 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				6E8035452BA0E3A600449875 /* Repositories */,
+				6E8035422BA0E38B00449875 /* Network */,
+				6E8035412BA0E38400449875 /* Local */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		6E8035412BA0E38400449875 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				6E8035432BA0E3A100449875 /* LocalDataKC.swift */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		6E8035422BA0E38B00449875 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				6E8035542BA0F90100449875 /* Endpoints */,
+				6E80355B2BA0FA9800449875 /* NetworkLogin.swift */,
+				6EEBD3362BA8469D0047D79A /* NetworkHeroes.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		6E8035452BA0E3A600449875 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				6E80355D2BA0FCD100449875 /* LoginRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		6E8035542BA0F90100449875 /* Endpoints */ = {
+			isa = PBXGroup;
+			children = (
+				6E8035522BA0F8FE00449875 /* Endpoints.swift */,
+				6E8035552BA0F92D00449875 /* HTTPResponse.swift */,
+				6E8035572BA0F97F00449875 /* HTTPMethods.swift */,
+			);
+			path = Endpoints;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +320,9 @@
 			dependencies = (
 			);
 			name = Practica_AsyncProg_AGGA;
+			packageProductDependencies = (
+				6E8035602BA0FE6600449875 /* KeychainSwift */,
+			);
 			productName = Practica_AsyncProg_AGGA;
 			productReference = 6E8035012BA0DE2D00449875 /* Practica_AsyncProg_AGGA.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +395,10 @@
 				Base,
 			);
 			mainGroup = 6E8034F82BA0DE2D00449875;
+			packageReferences = (
+				6E80355F2BA0FE6600449875 /* XCRemoteSwiftPackageReference "keychain-swift" */,
+				6EEBD33E2BA9F8960047D79A /* XCRemoteSwiftPackageReference "CombineCocoa" */,
+			);
 			productRefGroup = 6E8035022BA0DE2D00449875 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -233,7 +417,7 @@
 			files = (
 				6E8035112BA0DE2E00449875 /* LaunchScreen.storyboard in Resources */,
 				6E80350E2BA0DE2E00449875 /* Assets.xcassets in Resources */,
-				6E80350C2BA0DE2D00449875 /* Main.storyboard in Resources */,
+				6EEBD33D2BA851520047D79A /* LoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +442,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E8035092BA0DE2D00449875 /* ViewController.swift in Sources */,
 				6E8035052BA0DE2D00449875 /* AppDelegate.swift in Sources */,
+				6E8035562BA0F92D00449875 /* HTTPResponse.swift in Sources */,
+				6E80355E2BA0FCD100449875 /* LoginRepository.swift in Sources */,
 				6E8035072BA0DE2D00449875 /* SceneDelegate.swift in Sources */,
+				6EEBD3372BA8469D0047D79A /* NetworkHeroes.swift in Sources */,
+				6E8035512BA0F80200449875 /* LoginRepositoryProtocol.swift in Sources */,
+				6E80354D2BA0F66E00449875 /* AppState.swift in Sources */,
+				6E80354F2BA0F71900449875 /* LoginUseCase.swift in Sources */,
+				6E80354B2BA0E78000449875 /* LoginView.swift in Sources */,
+				6E80355C2BA0FA9800449875 /* NetworkLogin.swift in Sources */,
+				6EEBD3392BA8472C0047D79A /* Models.swift in Sources */,
+				6E8035532BA0F8FE00449875 /* Endpoints.swift in Sources */,
+				6EEBD33C2BA851520047D79A /* LoginViewController.swift in Sources */,
+				6E8035442BA0E3A100449875 /* LocalDataKC.swift in Sources */,
+				6E8035582BA0F97F00449875 /* HTTPMethods.swift in Sources */,
+				6E80355A2BA0F9DB00449875 /* ConstantApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +494,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		6E80350A2BA0DE2D00449875 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6E80350B2BA0DE2D00449875 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		6E80350F2BA0DE2E00449875 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -446,10 +635,8 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Practica_AsyncProg_AGGA/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -474,10 +661,8 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Practica_AsyncProg_AGGA/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -607,6 +792,33 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6E80355F2BA0FE6600449875 /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/evgenyneu/keychain-swift";
+			requirement = {
+				kind = exactVersion;
+				version = 21.0.0;
+			};
+		};
+		6EEBD33E2BA9F8960047D79A /* XCRemoteSwiftPackageReference "CombineCocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/CombineCommunity/CombineCocoa.git";
+			requirement = {
+				kind = exactVersion;
+				version = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6E8035602BA0FE6600449875 /* KeychainSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6E80355F2BA0FE6600449875 /* XCRemoteSwiftPackageReference "keychain-swift" */;
+			productName = KeychainSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6E8034F92BA0DE2D00449875 /* Project object */;
 }

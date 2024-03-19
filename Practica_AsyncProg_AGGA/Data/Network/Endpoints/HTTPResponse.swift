@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+struct HTTPResponseCodes{
+    static let SUCCES = 200
+    static let NOT_AUTHORIZED = 401
+    static let ERROR = 502
+}

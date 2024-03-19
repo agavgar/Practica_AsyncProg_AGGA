@@ -6,3 +6,11 @@
 //
 
 import Foundation
+import KeychainSwift
+
+final class LocalDataKC {
+    
+    
+    
+    
+}
