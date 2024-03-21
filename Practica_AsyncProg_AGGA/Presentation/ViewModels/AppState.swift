@@ -10,7 +10,7 @@ import Combine
 
 enum LoginStatus {
     case none
-    case succes
+    case success
     case error
     case notValidated
 }
@@ -34,7 +34,7 @@ final class AppState {
         Task{
             if (await loginUseCase.loginApp(user: user, password: password)){
                 // Login succes
-                self.statusLogin = .succes
+                self.statusLogin = .success
             } else {
                 // error login
                 self.statusLogin = .error
@@ -47,7 +47,7 @@ final class AppState {
         Task{
             if (await loginUseCase.validateToken()){
                 //Success
-                self.statusLogin = .succes
+                self.statusLogin = .success
             } else {
                 self.statusLogin = .notValidated
             }

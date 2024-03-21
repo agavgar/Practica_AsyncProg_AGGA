@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TransformationViewController" customModule="Practica_AsyncProg_AGGA" customModuleProvider="target">
+            <connections>
+                <outlet property="tableView" destination="7aJ-qy-fXR" id="khm-i9-2Sm"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="nGD-GA-Yex"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.25" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fondo3" translatesAutoresizingMaskIntoConstraints="NO" id="EnC-6f-YTP" userLabel="fondo3">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                </imageView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="7aJ-qy-fXR">
+                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemOrangeColor"/>
+            <constraints>
+                <constraint firstItem="7aJ-qy-fXR" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="1I7-dx-2AN"/>
+                <constraint firstItem="EnC-6f-YTP" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="IbA-eI-aKR"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="7aJ-qy-fXR" secondAttribute="bottom" id="NGB-Mh-L0g"/>
+                <constraint firstItem="EnC-6f-YTP" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="k4B-eM-BTi"/>
+                <constraint firstAttribute="bottom" secondItem="EnC-6f-YTP" secondAttribute="bottom" id="nqR-q7-iwE"/>
+                <constraint firstAttribute="trailing" secondItem="7aJ-qy-fXR" secondAttribute="trailing" id="os9-Pi-LGa"/>
+                <constraint firstAttribute="trailing" secondItem="EnC-6f-YTP" secondAttribute="trailing" id="sG9-6K-U4k"/>
+                <constraint firstItem="7aJ-qy-fXR" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="sw7-oV-Zxi"/>
+            </constraints>
+            <point key="canvasLocation" x="132" y="-11"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="fondo3" width="1080" height="1920"/>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

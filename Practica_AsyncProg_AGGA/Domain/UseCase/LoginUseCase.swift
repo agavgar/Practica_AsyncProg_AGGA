@@ -26,7 +26,7 @@ final class LoginUseCase: LoginUseCaseProtocol {
         let token = await repo.loginApp(user: user, password: password)
         
         if token != "" {
-            KeychainSwift().set(ConstantApp.CONST_TOKEN_ID_KC, forKey: token)
+            KeychainSwift().set(token, forKey: ConstantApp.CONST_TOKEN_ID_KC)
             return true
         } else {
             KeychainSwift().delete(ConstantApp.CONST_TOKEN_ID_KC)
@@ -40,7 +40,7 @@ final class LoginUseCase: LoginUseCaseProtocol {
     }
     
     func validateToken() async -> Bool {
-        if KeychainSwift().get(ConstantApp.CONST_TOKEN_ID_KC) != "" {
+        if KeychainSwift().get(ConstantApp.CONST_TOKEN_ID_KC) != "" && KeychainSwift().get(ConstantApp.CONST_TOKEN_ID_KC) != nil {
             return true
         } else {
             return false
@@ -61,22 +61,27 @@ final class LoginUseCaseFake: LoginUseCaseProtocol {
         let token = await repo.loginApp(user: user, password: password)
         
         if token != "" {
-            KeychainSwift().set(ConstantApp.CONST_TOKEN_ID_KC, forKey: token)
+            KeychainSwift().set(token, forKey: ConstantApp.CONST_TOKEN_ID_KC)
             return true
         } else {
             KeychainSwift().delete(ConstantApp.CONST_TOKEN_ID_KC)
+            
             return false
         }
     }
     
     func logout() async {
-        //Logoiout
+        //Logout
         KeychainSwift().delete(ConstantApp.CONST_TOKEN_ID_KC)
 
     }
     
     func validateToken() async -> Bool {
-        return true
+        if KeychainSwift().get(ConstantApp.CONST_TOKEN_ID_KC) != "" {
+            return true
+        } else {
+            return false
+        }
     }
     
     

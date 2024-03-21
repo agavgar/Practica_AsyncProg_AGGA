@@ -81,7 +81,15 @@ class LoginViewController: UIViewController {
                 .sink { [weak self] _ in
                     if let user = self?.user, let pass = self?.pass {
                         self?.appState?.loginApp(user: user, password: pass)
+                        DispatchQueue.global().asyncAfter(deadline: .now() + .seconds(1)) {
+                            DispatchQueue.main.async {
+                                if self?.appState?.statusLogin == .error {
+                                    self?.showAlert(message: NSLocalizedString("User/Password not correct, please login correctly", comment: "Change the user OR the password"))
+                                }
+                            }
+                        }
                     }
+                    
                 }
                 .store(in: &suscriptors)
             
@@ -92,11 +100,21 @@ class LoginViewController: UIViewController {
     //MARK: - Preparation UI
     func updateUI() {
         DispatchQueue.main.async {
+            self.localizationUI()
             self.btnLogin.isHidden = true
             self.lblPasswordError.isHidden = true
             self.lblUserNameError.isHidden = true
             self.btnLogin.tintColor = .yellow
         }
+    }
+    
+    //MARK: - Localization Strings
+    func localizationUI(){
+        lblUserNameError.text = NSLocalizedString("Username must contain more than 4 letters", comment: "Username error")
+        lblPasswordError.text = NSLocalizedString("Password must contain more than 4 letters", comment: "Password Error")
+        txtUsername.placeholder = NSLocalizedString("Email", comment: "Insert Email")
+        txtPassword.placeholder = NSLocalizedString("Password", comment: "Insert Password")
+        btnLogin.setTitle(NSLocalizedString("Login", comment: "Tap for login"), for: UIControl.State.normal)
     }
     
     //MARK: - Login Button Control
@@ -128,6 +146,25 @@ class LoginViewController: UIViewController {
         }
     }
     
+    private func showAlert(message: String){
+        let alertController = UIAlertController(title: "Login Error", message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Accept", style: .default) { [weak self] action in
+            //self?.appState?.statusLogin = .none
+        }
+        alertController.addAction(okAction)
+        present(alertController, animated: true, completion: nil)
+    }
+    
+    //MARK: - Method to hide keyboard
+    func hideKeyboard(){
+        let tap = UITapGestureRecognizer(target: self, action: #selector(LoginViewController.hideKeyboardOBJC))
+        tap.cancelsTouchesInView = false
+        self.view.addGestureRecognizer(tap)
+    }
+    
+    @objc func hideKeyboardOBJC(){
+        view.endEditing(true)
+    }
     
     
 }

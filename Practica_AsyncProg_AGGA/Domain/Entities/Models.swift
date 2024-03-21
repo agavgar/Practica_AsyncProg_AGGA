@@ -14,3 +14,20 @@ struct Heroes: Decodable {
     let favorite: Bool?
     let photo: String?
 }
+
+struct HerosRequest: Codable {
+    let name: String
+}
+
+struct Transformation: Decodable {
+    let id: UUID?
+    let name: String?
+    let description: String?
+    let photo: String?
+    let hero: Heroes
+}
+
+struct TransformationRequest: Codable {
+    let id: UUID?
+}
+

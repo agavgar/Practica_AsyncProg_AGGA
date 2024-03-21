@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  Practica_AsyncProg_AGGA
+
+  Created by Alejandro Alberto Gavira García on 20/3/24.
+  
+*/
+
+
+"Email"="Username";
+"Password"="Password";
+"Login"="Login";
+"Username must contain more than 4 letters"="Username must contain more than 4 letters";
+"Password must contain more than 4 letters"="Password must contain more than 4 letters";
+"User/Password not correct, please login correctly"="User/Password not correct, please login correctly";

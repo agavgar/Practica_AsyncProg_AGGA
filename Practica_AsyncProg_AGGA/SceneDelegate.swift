@@ -20,7 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         // Evaluate states in app
         appState.validateControlLogin()
-            
+        
         // Naviugation Controller
         var nav: UINavigationController?
         
@@ -36,9 +36,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                         self.window!.rootViewController = nav
                         self.window?.makeKeyAndVisible()
                     }
-                case .succes:
+                case .success:
                     // Go HOME
                     print("Go Home")
+                    DispatchQueue.main.async {
+                        nav = UINavigationController(rootViewController: HomeViewController(appState: self.appState,viewModel: HeroesViewModel()))
+                        self.window!.rootViewController = nav
+                        self.window?.makeKeyAndVisible()
+                    }
                 case .error:
                     print("Error")
                 }
