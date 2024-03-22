@@ -28,4 +28,5 @@ final class HeroesViewModel: ObservableObject {
             self.heroData = data
         }
     }
+    
 }

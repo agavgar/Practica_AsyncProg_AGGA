@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TransformationViewController" customModule="Practica_AsyncProg_AGGA" customModuleProvider="target">
             <connections>
+                <outlet property="lblNoData" destination="hz0-9Z-CU6" id="1hN-f7-fC8"/>
                 <outlet property="tableView" destination="7aJ-qy-fXR" id="khm-i9-2Sm"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="nGD-GA-Yex"/>
             </connections>
@@ -26,6 +27,12 @@
                     <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NO DATA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hz0-9Z-CU6">
+                    <rect key="frame" x="98" y="398.66666666666669" width="197" height="55"/>
+                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="46"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemOrangeColor"/>
@@ -33,19 +40,21 @@
                 <constraint firstItem="7aJ-qy-fXR" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="1I7-dx-2AN"/>
                 <constraint firstItem="EnC-6f-YTP" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="IbA-eI-aKR"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="7aJ-qy-fXR" secondAttribute="bottom" id="NGB-Mh-L0g"/>
+                <constraint firstItem="hz0-9Z-CU6" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="ZaR-VM-J9Z"/>
+                <constraint firstItem="hz0-9Z-CU6" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="gAJ-pd-qD4"/>
                 <constraint firstItem="EnC-6f-YTP" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="k4B-eM-BTi"/>
                 <constraint firstAttribute="bottom" secondItem="EnC-6f-YTP" secondAttribute="bottom" id="nqR-q7-iwE"/>
                 <constraint firstAttribute="trailing" secondItem="7aJ-qy-fXR" secondAttribute="trailing" id="os9-Pi-LGa"/>
                 <constraint firstAttribute="trailing" secondItem="EnC-6f-YTP" secondAttribute="trailing" id="sG9-6K-U4k"/>
                 <constraint firstItem="7aJ-qy-fXR" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="sw7-oV-Zxi"/>
             </constraints>
-            <point key="canvasLocation" x="132" y="-11"/>
+            <point key="canvasLocation" x="130.53435114503816" y="-11.267605633802818"/>
         </view>
     </objects>
     <resources>
         <image name="fondo3" width="1080" height="1920"/>
         <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -97,12 +97,11 @@ extension HomeViewController: UITableViewDataSource {
 
 extension HomeViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let id = viewModel.heroData[indexPath.row].id{
-            let transformViewModel = TransformViewModel(id: id)
-            let transformVC = TransformationViewController(appState: self.appState, viewModel: transformViewModel)
-            self.navigationController?.pushViewController(transformVC, animated: true)
-        }
         
+        let hero = viewModel.heroData[indexPath.row]
+        let transformViewModel = TransformViewModel(hero: hero)
+        let transformVC = TransformationViewController(appState: self.appState, viewModel: transformViewModel)
+        self.navigationController?.pushViewController(transformVC, animated: true)
     }
 }
 

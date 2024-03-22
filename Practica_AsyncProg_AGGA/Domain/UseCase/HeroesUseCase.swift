@@ -26,6 +26,7 @@ final class HeroesUseCase: HeroesUseCaseProtocol {
 }
 
 final class HeroesUseCaseFake: HeroesUseCaseProtocol {
+    
     var repo: HeroesRepositoryProtocol
     
     init(repo: HeroesRepositoryProtocol = HeroesRepository(network: NetworkHeroesFake())) {
@@ -35,8 +36,6 @@ final class HeroesUseCaseFake: HeroesUseCaseProtocol {
     func getHeroes(filter: String) async -> [Heroes] {
         await repo.getHeroes(filter: filter)
     }
-    
-    
     
     
 }

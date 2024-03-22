@@ -44,7 +44,6 @@ final class NetworkTransforms: NetworkTransformsProtocol {
         return transformation
     }
     
-    
 }
 
 final class NetworkTransformsFake: NetworkTransformsProtocol {

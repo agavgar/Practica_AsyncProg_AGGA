@@ -10,9 +10,10 @@ import CombineCocoa
 import Combine
 
 class TransformationViewController: UIViewController {
-
+    
     //MARK: - Outlets
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var lblNoData: UILabel!
     
     //MARK: - Models
     private var appState:AppState
@@ -30,10 +31,11 @@ class TransformationViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    //MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         self.title = "Transform"
         setRightBar(UInavItem: self.navigationItem, UInavCont: self.navigationController!)
         
@@ -42,7 +44,7 @@ class TransformationViewController: UIViewController {
         
         tableView.register(UINib(nibName: "HeroTableViewCell", bundle: nil), forCellReuseIdentifier: "Cell")
         binding()
-
+        
     }
     
     func setRightBar(UInavItem: UINavigationItem,UInavCont: UINavigationController ){
@@ -56,23 +58,34 @@ class TransformationViewController: UIViewController {
         self.appState.LogOut()
     }
     
+    
     //MARK: - Binding UI
     func binding(){
         self.viewModel.$transformData
             .receive(on: DispatchQueue.main)
-            .sink(receiveValue: { _ in
-                self.tableView.reloadData()
+            .sink(receiveValue: { [weak self] data in
+                self?.tableView.reloadData()
+                if data.isEmpty{
+                    DispatchQueue.main.async {
+                        self?.lblNoData.isHidden = false
+                    }
+                }else{
+                    DispatchQueue.main.async {
+                        self?.lblNoData.isHidden = true
+                    }
+                }
             })
             .store(in: &suscriptors)
     }
-
 }
+
 //MARK: - Datasource
 extension TransformationViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        
-        
+        let detailViewModel = DetailViewModel(transformData: viewModel.transformData[indexPath.row])
+        let detailVC = DetailViewController(appState: self.appState, viewModel: detailViewModel)
+        self.navigationController?.pushViewController(detailVC, animated: true)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

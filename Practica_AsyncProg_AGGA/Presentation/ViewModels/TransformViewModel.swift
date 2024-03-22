@@ -10,15 +10,15 @@ import Combine
 
 final class TransformViewModel: ObservableObject{
     @Published var transformData = [Transformation]()
-    private var idHeroe: UUID
+    var hero: Heroes
     
     private var useCase: TransformUseCaseProtocol
     
-    init(useCase: TransformUseCaseProtocol = TransformUseCase(), id:UUID) {
+    init(useCase: TransformUseCaseProtocol = TransformUseCase(), hero:Heroes) {
         self.useCase = useCase
-        self.idHeroe = id
+        self.hero = hero
         Task{
-            await getTransform(id: idHeroe)
+            await getTransform(id: hero.id!)
         }
         
     }

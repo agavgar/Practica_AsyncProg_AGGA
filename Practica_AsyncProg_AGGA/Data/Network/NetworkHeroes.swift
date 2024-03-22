@@ -17,8 +17,8 @@ final class NetworkHeroes: NetworkHeroesProtocol {
     func getHeroes(filter:String) async -> [Heroes] {
         var heroes = [Heroes]()
         let url = "\(ConstantApp.CONST_API_URL)\(Endpoints.heroes.rawValue)"
-        var segCredential = ""
         
+        var segCredential = ""
         if let token = KeychainSwift().get(ConstantApp.CONST_TOKEN_ID_KC){
             segCredential = "Bearer \(token)"
         }
