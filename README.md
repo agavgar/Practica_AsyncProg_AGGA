@@ -4,8 +4,10 @@ En esta práctica desarrollo una app con Combine, CombineCocoa y AsyncAwait bajo
 
 **Resultado: WIP**
 
-
-
+![Simulator Screenshot - iPhone 15 - 2024-03-22 at 18 01 1](https://github.com/agavgar/Practica_AsyncProg_AGGA/assets/98350985/4264d4fd-a93b-49e7-bed9-7e8190b7a2ce)
+![Simulator Screenshot - iPhone 15 - 2024-03-22 at 18 02 1](https://github.com/agavgar/Practica_AsyncProg_AGGA/assets/98350985/5992903e-4f81-4fa7-990b-df12c14c8b9e)
+![Simulator Screenshot - iPhone 15 - 2024-03-22 at 18 02 2](https://github.com/agavgar/Practica_AsyncProg_AGGA/assets/98350985/b5d2b3c0-6809-4e9e-abb8-e60c6d62f8f7)
+![Simulator Screenshot - iPhone 15 - 2024-03-22 at 18 02 3](https://github.com/agavgar/Practica_AsyncProg_AGGA/assets/98350985/3db6e055-d7d6-4a68-86b3-ee56df8579d8)
 
 **Breve descripción**
 
