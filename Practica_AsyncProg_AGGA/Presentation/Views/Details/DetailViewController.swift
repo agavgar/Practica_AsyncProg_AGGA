@@ -38,30 +38,45 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if let hero = viewModel.heroData {
-            imgDetail.loadImage(url: URL(string: hero.photo!)!)
-            lblName.text = hero.name
-            txtDescription.text = hero.description
+        self.title = "Detail"
+        setRightBar(UInavItem: self.navigationItem, UInavCont: self.navigationController!)
+        navigationController?.navigationBar.tintColor = .yellow
+        
+        checkUI()
+        
+    }
+    
+    func setRightBar(UInavItem: UINavigationItem,UInavCont: UINavigationController ){
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .close, target: self, action: #selector(logOut))
+        navigationController?.navigationItem.rightBarButtonItem?.tintColor = .yellow
+        
+    }
+    
+    @objc
+    func logOut(_sender: Any) {
+        self.appState.LogOut()
+    }
+    
+    func checkUI(){
+        
+        txtDescription.textColor = .white
+        
+        if viewModel.heroData != nil, let hero = viewModel.heroData {
+            DispatchQueue.main.async {
+                self.imgDetail.loadImage(url: URL(string: hero.photo!)!)
+                self.lblName.text = hero.name
+                self.txtDescription.text = hero.description
+            }
         }else{
-            if let transform = viewModel.transformData{
-                imgDetail.loadImage(url: URL(string: transform.photo!)!)
-                lblName.text = transform.name
-                txtDescription.text = transform.description
+            if viewModel.transformData != nil, let transform = viewModel.transformData, let info = transform.description{
+                DispatchQueue.main.async {
+                    self.imgDetail.loadImage(url: URL(string: transform.photo!)!)
+                    self.lblName.text = transform.name
+                    self.txtDescription.text = info // NO FUNCIONA ESTA LINEA Y NO SE PORQUÉ
+                    print("Es este: \(info)")
+                }
             }
         }
-        
-        
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

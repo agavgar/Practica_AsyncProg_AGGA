@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Heroes: Decodable {
+struct Heroes: Decodable, Equatable {
     let id: UUID?
     let name: String?
     let description: String?
@@ -19,7 +19,7 @@ struct HerosRequest: Codable {
     let name: String
 }
 
-struct Transformation: Decodable {
+struct Transformation: Decodable, Equatable {
     let id: UUID?
     let name: String?
     let description: String?

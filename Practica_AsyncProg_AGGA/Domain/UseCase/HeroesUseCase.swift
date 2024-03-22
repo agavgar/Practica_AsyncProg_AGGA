@@ -29,7 +29,7 @@ final class HeroesUseCaseFake: HeroesUseCaseProtocol {
     
     var repo: HeroesRepositoryProtocol
     
-    init(repo: HeroesRepositoryProtocol = HeroesRepository(network: NetworkHeroesFake())) {
+    init(repo: HeroesRepositoryProtocol = HeroesRepositoryFake(network: NetworkHeroesFake())) {
         self.repo = repo
     }
     
