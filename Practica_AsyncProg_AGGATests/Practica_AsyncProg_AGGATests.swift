@@ -52,7 +52,7 @@ final class Practica_AsyncProg_AGGATests: XCTestCase {
         XCTAssertNotNil(obj)
         
         let resp = await obj.validateToken()
-        XCTAssertNotEqual(resp, true)
+        XCTAssertEqual(resp, true)
         
         let loginDo = await obj.loginApp(user: "", password: "")
         XCTAssertEqual(loginDo, true)
@@ -91,6 +91,14 @@ final class Practica_AsyncProg_AGGATests: XCTestCase {
         XCTAssertEqual(jwt, nil)
     }
     
+    func testLoginView() {
+        let appState = AppState(loginUseCase: LoginUseCaseFake())
+        XCTAssertNotNil(appState)
+        
+        let view = LoginViewController(appState: appState)
+        XCTAssertNotNil(view)
+    }
+    
     //MARK: - Heroes Section
     func testHeroNetwork() async throws {
         let obj1 = NetworkHeroes()
@@ -117,6 +125,26 @@ final class Practica_AsyncProg_AGGATests: XCTestCase {
         
         let hero = await useCase.getHeroes(filter: "")
         XCTAssertNotEqual(hero,[])
+    }
+    
+    func testHeroRepository() async throws {
+        let repo = HeroesRepository(network: NetworkHeroesFake())
+        XCTAssertNotNil(repo)
+        
+        let model = await repo.getHeroes(filter: "")
+        XCTAssertNotNil(model)
+        
+        XCTAssertEqual(model.count, 2)
+    }
+    
+    func testHeroRepositoryFake() async throws {
+        let repo = HeroesUseCaseFake()
+        XCTAssertNotNil(repo)
+        
+        let model = await repo.getHeroes(filter: "")
+        XCTAssertNotNil(model)
+        
+        XCTAssertEqual(model.count, 2)
     }
     
     func testHeroViewModel() async throws {
@@ -200,6 +228,17 @@ final class Practica_AsyncProg_AGGATests: XCTestCase {
         XCTAssertNotNil(view)
     }
     
+    func testHeroesViewController() {
+        let viewModel = HeroesViewModel(useCase: HeroesUseCaseFake())
+        XCTAssertNotNil(viewModel)
+        
+        let view = HomeViewController(appState: AppState(), viewModel: viewModel)
+        XCTAssertNotNil(viewModel)
+        XCTAssertNotNil(view.binding())
+        
+        
+    }
+    
     //MARK: - Transformation
     func testTransformNetwork() async throws {
         let obj1 = NetworkTransforms()
@@ -233,6 +272,26 @@ final class Practica_AsyncProg_AGGATests: XCTestCase {
         XCTAssertNotNil(vm)
         
         XCTAssertEqual(vm.transformData.count, 2)
+    }
+    
+    func testTransformationRepository() async throws {
+        let repo = TransformationRepository(network: NetworkTransformsFake())
+        XCTAssertNotNil(repo)
+        
+        let model = await repo.getTransforms(id: UUID())
+        XCTAssertNotNil(model)
+        
+        XCTAssertEqual(model.count, 2)
+    }
+    
+    func testTransformationRepositoryFake() async throws {
+        let repo = TransformationRepositoryFake()
+        XCTAssertNotNil(repo)
+        
+        let model = await repo.getTransforms(id: UUID())
+        XCTAssertNotNil(model)
+        
+        XCTAssertEqual(model.count, 2)
     }
     
     func testTransformUseCase() async throws {
@@ -298,7 +357,7 @@ final class Practica_AsyncProg_AGGATests: XCTestCase {
         XCTAssertNotNil(model)
         
         XCTAssertEqual(model.name, "Vegeto")
-        XCTAssertEqual(model.info, "Mezcla Vegeta Goku pendientes")
+        XCTAssertEqual(model.description, "Mezcla Vegeta Goku pendientes")
     }
     
     func testTransformPresentation() async throws {
@@ -306,6 +365,55 @@ final class Practica_AsyncProg_AGGATests: XCTestCase {
         XCTAssertNotNil(viewModel)
         
         let view = await TransformationViewController(appState: AppState(), viewModel: viewModel)
+        XCTAssertNotNil(view)
+    }
+    
+    func testTransformationViewController() {
+        let viewModel = TransformViewModel(useCase: TransformUseCaseFake(), hero: Heroes(id: UUID(), name: "goku", description: "", favorite: true, photo: ""))
+        XCTAssertNotNil(viewModel)
+        
+        let view = TransformationViewController(appState: AppState(), viewModel: viewModel)
+        XCTAssertNotNil(viewModel)
+        XCTAssertNotNil(view.binding())
+        
+    }
+    
+    //MARK: - Detail
+    func testDetailViewModel() async throws {
+        let vm = DetailViewModel()
+        XCTAssertNotNil(vm)
+    }
+    
+    func testDetailViewModelTransform() async throws {
+        let vm = DetailViewModel(transformData: Transformation(id: UUID(), name: "Vegeto", description: "Mezcla Vegeta Goku pendientes", photo: "", hero: Heroes(id: UUID(), name: "goku", description: "", favorite: true, photo: "")))
+        XCTAssertNotNil(vm)
+    }
+    
+    func testDetailViewModelHero() async throws {
+        let vm = DetailViewModel(heroData: Heroes(id: UUID(), name: "goku", description: "", favorite: true, photo: ""))
+        XCTAssertNotNil(vm)
+    }
+    
+    func testDetailData() async throws {
+        let vm = DetailViewModel(transformData: Transformation(id: UUID(), name: "Vegeto", description: "Mezcla Vegeta Goku pendientes", photo: "", hero: Heroes(id: UUID(), name: "goku", description: "", favorite: true, photo: "")))
+        XCTAssertNotNil(vm)
+        XCTAssertEqual(vm.transformData?.name!, "Vegeto")
+
+    }
+    
+    func testDetailDomain() {
+        let model = Transformation(id: UUID(), name: "Vegeto", description: "Mezcla Vegeta Goku pendientes", photo: "", hero: Heroes(id: UUID(), name: "goku", description: "", favorite: true, photo: ""))
+        XCTAssertNotNil(model)
+        
+        XCTAssertEqual(model.name, "Vegeto")
+        XCTAssertEqual(model.description, "Mezcla Vegeta Goku pendientes")
+    }
+    
+    func testDetailPresentation() async throws {
+        let vm = DetailViewModel(heroData: Heroes(id: UUID(), name: "goku", description: "", favorite: true, photo: ""))
+        XCTAssertNotNil(vm)
+        
+        let view = await DetailViewController(appState: AppState(), viewModel: vm)
         XCTAssertNotNil(view)
     }
     
