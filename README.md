@@ -11,7 +11,7 @@ En esta práctica desarrollo una app con Combine, CombineCocoa y AsyncAwait bajo
 
 **Breve descripción**
 
-Seguimos trabajando con Dragon Ball. Ya que su historia tiene muchos personajes interesantes, en esta app solo tenemos 3 pantallas pero se dedican a recibir, guardar o borrar información de una base de datos interna. Podemos filtrar los personajes por nombre y vienen ordenados direcatamente. Ahora cambiamos todo a AsyncAwait que es una herramienta poderosísima y muy útil con la que trabajar, es como si aprendieramos un truco en mitad del curso que facilita todo. Luego trabajamos con Combine y CombineCocoa para una programación reactiva y muy divertida de realizar. Hemos aprendido también a realizar todos los pasos con mayor seguridad, Network -> Repository -> UseCase -> ViewModel > View
+Ahora cambiamos todo a AsyncAwait que es una herramienta poderosísima y muy útil con la que trabajar, es como si aprendieramos un truco en mitad del curso que facilita todo. Luego trabajamos con Combine y CombineCocoa para una programación reactiva y muy divertida de realizar. Hemos aprendido también a realizar todos los pasos con mayor seguridad, Network -> Repository -> UseCase -> ViewModel > View
 
 **Guía de instalación**
 
